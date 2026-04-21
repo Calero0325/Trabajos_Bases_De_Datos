@@ -1,0 +1,27 @@
+Proyecto: Bugggy´s FIT (Plataforma de Fitness y Gamificación)
+Descripción General
+Bugggy´s FIT es una aplicación enfocada en el seguimiento del progreso físico y la gestión de rutinas de entrenamiento. 
+El núcleo de este proyecto es un modelado de base de datos relacionales y no relacionales, diseñado para manejar grandes volúmenes de 
+datos históricos de usuarios e integrar mecánicas de gamificación.
+
+
+
+Arquitectura y Modelado de Datos
+Durante el desarrollo de la arquitectura de datos de Olimpo, se aplicaron los siguientes conceptos:
+
+1. Bases de Datos Relacionales (MySQL):
+
+Núcleo Transaccional: Estructuración de entidades principales (Usuarios, Catálogo de Ejercicios, Historial de Pagos/Suscripciones) garantizando la máxima integridad referencial y propiedades ACID.
+
+Trazabilidad: Diseño de tablas para registrar el progreso estructurado, peso y repeticiones a lo largo del tiempo.
+
+2. Bases de Datos No Relacionales (NoSQL):
+
+Modelado Basado en Documentos (Ej. MongoDB): Utilizado para almacenar estructuras flexibles como las rutinas personalizadas. Como cada rutina puede variar drásticamente en su estructura (diferentes tipos de series, tiempos de descanso, o métricas específicas), el formato JSON/BSON permite una escalabilidad sin esquemas rígidos.
+
+Caché y Alto Rendimiento (Ej. Redis): Implementación de estructuras clave-valor para soportar el sistema de gamificación. Esto permite consultas en tiempo real de los rankings globales, acumulación rápida de puntajes y lectura veloz de logros desbloqueados sin sobrecargar la base de datos principal.
+
+
+Enlaces a los Repositorios del Proyecto:
+FRONT: https://github.com/AndresFelipeGonzalezGarcia/ProyectoBasesDeDatos2_Front
+BACK: https://github.com/tedc10/ProyectoBasesDeDatos2_Back

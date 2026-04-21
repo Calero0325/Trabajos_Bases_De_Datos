@@ -1,0 +1,72 @@
+SET serveroutput ON;
+
+
+
+DECLARE
+vv_nombre varchar(50);
+vv_edad number;
+BEGIN
+vv_nombre := 'Samuel';
+vv_edad := 10;
+
+DBMS_OUTPUT.PUT_LINE('HOLA ' || vv_nombre || ', tienes ' || vv_edad );
+
+end;
+/
+
+
+DECLARE
+vv_numero1 number;
+vv_numero2 number;
+BEGIN
+vv_numero1 := 5;
+vv_numero2 := 3;
+dbms_output.put_line('la suma es ' || (vv_numero1 + vv_numero2));
+dbms_output.put_line('la resta es ' || (vv_numero1 - vv_numero2));
+dbms_output.put_line('la resta es ' || (vv_numero1 / vv_numero2));
+dbms_output.put_line('la resta es ' || (vv_numero1 * vv_numero2));
+end;
+/
+
+
+
+DECLARE 
+vv_numero1 number;
+vv_numero2 number;
+vv_resultado number;
+BEGIN
+vv_numero1 := 5;
+vv_numero2 := 3;
+IF(vv_numero2 = 0) THEN
+dbms_output.put_line('La operacion no se puede dividir por 0 ');
+ELSE
+vv_resultado := vv_numero1 / vv_numero2;
+IF(vv_resultado> 2 )THEN 
+DBMS_OUTPUT.PUT_LINE('Resultado alto');
+ELSIF (vv_resultado = 2) THEN 
+dbms_output.put_line('Resultado igual a dos');
+ELSE
+DBMS_OUTPUT.PUT_LINE('La divicion es baja ');
+END IF ;
+END IF ;
+END;
+/
+
+
+
+DECLARE 
+vv_edad number;
+BEGIN
+vv_edad := 59;
+if (vv_edad < 12) THEN 
+dbms_output.put_line('eres nino');
+ELSIF (vv_edad < 17 )  THEN
+dbms_output.put_line('ERES ADOLECENTE');
+ELSIF (vv_edad <59)THEN
+dbms_output.put_line('ERES ADULTO');
+ELSE 
+dbms_output.put_line('eres mayor');
+end if ;
+END ;
+/
+
