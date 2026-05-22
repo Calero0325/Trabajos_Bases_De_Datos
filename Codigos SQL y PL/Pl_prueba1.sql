@@ -77,22 +77,6 @@ END;
 ---- select serveroutput  (esto es paraq que cada vez se haga ingreso a la base )
 ----(begin - end ) = logica de programacion del begin hasta el end , si no esta ninguna de los dos no funciona el programa
 
------------------------------------------------------------------------------------------------------------------------------------------
----- REGLAS DEL CURSO TIPOS DE VARIABLES 
-
----- variables
----- vn_xxx (variable numerica  INT )
----- vd_xxx (DATE)
----- vv_xxx   (varchar)
----- vdo_xxx  (double) 
-
----- Contantes 
----- cn_xxx (variable numerica  INT )
----- cd_xxx (DATE)
----- cv_xxx   (varchar)
----- cdo_xxx  (double) 
----- control f7 es identar el codigo 
-
 
 --- prefijos 
 SP_nombre....

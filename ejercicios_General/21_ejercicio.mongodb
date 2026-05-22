@@ -1,0 +1,14 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.aggregate([
+  { 
+    $match: { 
+      $expr: { 
+        $gt: [{ $size: { $ifNull: ["$amenities", []] } }, 10] 
+      } 
+    } 
+  },
+  { $count: "listings_more_than_10_amenities" }
+])
+
+

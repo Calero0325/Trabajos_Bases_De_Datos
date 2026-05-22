@@ -1,0 +1,21 @@
+
+
+use("sample_airbnb");
+
+db.listingsAndReviews.aggregate([
+  {
+    $lookup: {
+      from: "hosts",                 // Colección secundaria imaginaria
+      localField: "host.host_id",    // Campo en la colección actual
+      foreignField: "host_id",       // Campo en la colección "hosts"
+      as: "info_host"    // Nombre del nuevo array generado
+    }
+  }
+])
+
+
+// EJERCICIO TEÓRICO: $lookup 
+
+// Cada documento de listing tendría un array 
+// con los datos del anfitrión obtenidos desde la colección "hosts",
+// unidos por el campo host_id.

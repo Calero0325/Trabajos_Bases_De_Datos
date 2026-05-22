@@ -1,0 +1,5 @@
+use("sample_airbnb");
+db.listingsAndReviews.insertMany([
+  { name: "Studio de Arte Urbano", price: 80.00 },
+  { name: "Loft Minimalista", price: 110.00 }
+])

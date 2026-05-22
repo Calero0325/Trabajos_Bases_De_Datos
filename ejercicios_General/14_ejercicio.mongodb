@@ -1,0 +1,7 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.find(
+  {},
+  { name: 1, price: 1, "address.country": 1, _id: 0 }
+).sort({ price: -1 }).limit(10);
+

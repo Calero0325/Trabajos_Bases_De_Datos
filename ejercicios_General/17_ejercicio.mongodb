@@ -1,0 +1,6 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.updateOne(
+  { name: "Apartamento Centro Santiago" }, // Criterio de búsqueda basado en el ejercicio 2
+  { $push: { amenities: "Smart TV" } }
+)

@@ -1,0 +1,18 @@
+
+$gte        // Mayor o igual que
+
+$lt         // Menor que
+
+$nin        // No está en el array (not in)
+
+$exists     // El campo existe o no existe
+
+$elemMatch  // Al menos un elemento del array cumple la condición
+
+$unset      // Elimina un campo del documento
+
+$and        // Todas las condiciones deben cumplirse
+
+$all        // busca documentos que contengan todos los elementos del array.
+
+$group      //agrupa documentos y hace cálculos como contar, sumar, promediar.

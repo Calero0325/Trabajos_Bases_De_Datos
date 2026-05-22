@@ -1,0 +1,75 @@
+Data WareHouse  
+
+ 
+Almacén de datos diseñado para permitir las actividades de inteligencia de un negocio,
+En definitiva, sirve para ayudar a analizar los datos recopilados por la empresa con el fin de mejorar su rendimiento  
+
+WareHouse = Almacén de datos  
+
+    Sirve para: 
+
+-   Para mantener un mayor conocimiento del negocio  
+
+-   Para tomar mejores decisiones y en un tiempo menor  
+
+-   Son la base para los sistemas de gestiones de relaciones con los clientes  
+
+ 
+
+ETL : extracción, Transformación y Carga 
+
+Data Warehousing: Unificar datos de distintas áreas de la empresa. 
+
+Migración de datos: Mover datos de sistemas antiguos a la nube. 
+
+ 
+
+Pentaho:  
+
+-   aplicación de etl  
+
+-   Backup implementar  
+
+-   Backup pull , bases de datos  
+
+-   Al hacer un backup el espacio que se guarda es menor a la de la base de datos
+
+ 
+
+Tipos de backup 
+
+-   RTO (Recovery Time Objective): 
+Tiempo máximo para recuperar el sistema después de un fallo (qué tan rápido vuelves a funcionar)  
+
+-   RPO (Recovery Point Objective): 
+Cantidad de datos que puedes perder (hasta qué momento puedes restaurar).  
+
+-   SCHEMA backup: 
+Guarda solo la estructura de la BD (tablas, columnas), sin datos. 
+
+-   FULL backup: 
+Copia completa de todos los datos 
+
+-   Incremental: 
+Copia solo lo que cambió desde el último backup (sea full o incremental).  
+
+-   Acumulativo  
+Copia todo lo que cambió desde el último backup completo. 
+
+ 
+
+-   Disaster recovery  
+
+Alta disponibilidad 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 

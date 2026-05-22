@@ -1,0 +1,6 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.find(
+  { name: { $regex: /luxury/i } },
+  { name: 1, _id: 0 }
+);

@@ -1,0 +1,7 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.find(
+  { "address.country": "Brazil" },
+  { name: 1, price: 1, _id: 0 }
+);
+

@@ -1,0 +1,14 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.updateOne(
+  { name: "Test Mansion" },
+  { 
+    $set: { 
+      name: "Test Mansion", 
+      price: 1500.00, 
+      "address.country": "United States" 
+    }
+  },
+  { upsert: true }
+)
+

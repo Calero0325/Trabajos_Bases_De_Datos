@@ -1,0 +1,6 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.find(
+  { amenities: "Heating" },
+  { name: 1, amenities: 1, _id: 0 }
+);

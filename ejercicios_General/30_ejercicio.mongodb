@@ -1,0 +1,16 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.aggregate([
+  {
+    $match: {
+      last_review: { $exists: true, $ne: null }
+    }
+  },
+  {
+    $group: {
+      _id: { $year: "$last_review" },
+      cantidad_listings: { $sum: 1 }
+    }
+  },
+  { $sort: { _id: -1 } }
+]);

@@ -1,0 +1,65 @@
+
+
+// Ver qué mercados existen 
+use('sample_airbnb');
+db.listingsAndReviews.distinct("address.market")
+
+//todos los sitios que esten en  chicago con mas de 5 años de antiguedad 
+
+use("sample_airbnb");
+db.listingsAndReviews.find({
+  "address.market": "Montreal",
+  "last_scraped": {
+    $lt: ISODate("2020-01-01T00:00:00.000Z")
+  }
+});
+ 
+
+//todos los que sean apartamentos, y dentro de las cosas que ofrecen tengan : televiosion por cable y wifi 
+
+use("sample_airbnb");
+db.listingsAndReviews.find({
+  property_type : "Apartment" ,
+  amenities: { $all: ["Wifi", "Cable TV"] }
+});
+
+
+//contador de camas y el pais 
+
+use("sample_airbnb");
+db.listingsAndReviews.aggregate([
+  {
+    $match: {
+      property_type: "Apartment",
+      amenities: { $all: ["Wifi", "Cable TV"] }
+    }
+  },
+  {
+    $group: {
+      _id: "$_id",
+      total_camas: { $sum: "$beds" }
+    }
+  }
+]);
+
+
+/// cuanto vale en total para la ciudad de porto 
+
+use("sample_airbnb");
+db.listingsAndReviews.aggregate([
+  {
+    $match: {
+      property_type: "Apartment",
+      "address.market" : "Montreal",
+      amenities: { $all: ["Wifi", "Cable TV"] }
+    }
+  },
+  {
+    $group: {
+      _id :"$_id" ,
+      precio_total:{ $sum:"$price"},
+      total_camas: { $sum: "$beds" }
+
+    }
+  }
+]);

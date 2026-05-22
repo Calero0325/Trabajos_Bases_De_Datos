@@ -1,0 +1,11 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.aggregate([
+  {
+    $group: {
+      _id: "$property_type",
+      average_guests: { $avg: "$accommodates" }
+    }
+  },
+  { $sort: { average_guests: -1 } }
+]);

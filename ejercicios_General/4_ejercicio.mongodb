@@ -1,0 +1,8 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.insertMany([
+  { 
+    name: "Casa de la Playa", 
+    amenities: ["Wifi", "Kitchen", "Free parking"] 
+  }
+])

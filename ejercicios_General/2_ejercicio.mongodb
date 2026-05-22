@@ -1,0 +1,9 @@
+use("sample_airbnb");
+
+db.listingsAndReviews.insertOne({
+  name: "Apartamento Centro Santiago",
+  address: {
+    country: "Chile",
+    market: "Santiago"
+  }
+})

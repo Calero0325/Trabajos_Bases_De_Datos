@@ -1,0 +1,5 @@
+use("sample_airbnb");
+db.listingsAndReviews.insertOne({ _id: "123", name: "Listing 1" })
+
+use("sample_airbnb");
+db.listingsAndReviews.insertOne({ _id: "123", name: "Listing 2" })

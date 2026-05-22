@@ -1,0 +1,12 @@
+
+
+find() // Consulta
+
+aggregate() // Pipeline de agregación
+
+insertMany() // Inserción
+
+updateOne() // Actualización
+
+deleteOne() //  Eliminación
+

@@ -1,0 +1,96 @@
+// Pruebaa , mongo , uso de crear una base y implementar una coleccion 
+
+
+use ("mundial2026")
+
+db.selecciones.insertMany([
+
+{nombre : "Colombia ",colorCamiseta:"Amarrila" , capital:"Bogota" , poblacion:60000000},
+{nombre : "Venezuela ",colorCamiseta:"Cafe" , capital:"Caracas" , poblacion:2 , mundialesGanados: 15},
+{nombre : "Peru",colorCamiseta:"Roja" , capital:"chocho" , poblacion:45}
+
+]);
+
+use ("mundial2026")
+db.paisesAlfitriones.insertMany([
+
+{nombre : "Mexico "},
+{nombre : "EE.UU "},
+{nombre : "Canada"}
+
+]);
+
+
+use ("mundial2026")
+db.paisesAlfitriones.insertMany([
+
+{nombre : "Mexico "},
+{nombre : "EE.UU "},
+{nombre : "Canada"}
+
+]);
+
+
+use ("mundial2026")
+db.estadios.insertMany([
+
+{nombre : "estadio de Mexico " , capacidad : 5},
+{nombre : "estadio de EE.UU ", capacidad: 400000000},
+{nombre : "estadio de Canada", capacidad: -8}
+
+]);
+
+
+
+
+use("mundial2026");
+db.comprasestadio.insertMany([
+  {
+    fecha: 2024 , 
+    costo: 250000000000000, 
+    productos: [
+      { producto: "polas", cantidad: 15 },
+      { producto: "dulces", cantidad: 45 }
+    ]
+  }
+]);
+
+
+
+/// UPDATE
+
+use ("mundial2026")
+db.estadios.updateOne(
+
+{nombre : "estadio de Mexico " , capacidad : 5}, // que es lo que quiero cambiar 
+{ $set: {nombre : "estadio de Mexico centro"}} // que se actualiza 
+);
+
+/// eliminar campo
+
+use ("mundial2026")
+db.estadios.updateOne(
+{nombre : "estadio de Mexico " , capacidad : 5}, 
+{ $unset: {nombre : ""}} // Eliminar campo 
+);
+
+
+
+//todos los sitios que pertenezcan chicago con mas de 5 años de antiguedad 
+use ("sample_airbnb")
+db.sample_airbnb.find({
+$and :[
+{ edad: {$gte: 18 } }, //edad mayor o igual = $gte
+{ ciudad: "Madrid"}
+
+]  
+});
+
+
+
+
+
+
+
+
+

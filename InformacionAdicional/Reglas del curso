@@ -1,0 +1,28 @@
+------------------------------------------------------------------------
+--- PREFIJO PARA LAS VARIABLES
+--- vn_xxxxx ---> Forma correcta de crear una variable numerica.
+--- vd_xxxx ---> Forma correcta de crear una variable de tipo Date.
+--- vv_xxxx ---> Forma correcta de crear una variable de tipo Varchar.
+--- vdo_xxx ----> Forma correcta de crear una variable de tipo double.
+-------------------------------------------------------------------------
+--- PREFIJO PARA LAS CONSTANTES
+--- cn_xxx ---> Forma correcta de crear una variable numerica.
+--- cd_xxx ---> Forma correcta de crear una variable de tipo Date.
+--- cv_xxx ---> Forma correcta de crear una variable de tipo Varchar
+--- cdo_xxx ----> Forma correcta de crear una variable de tipo double.
+---------------------------------------------------------------------------
+--- prefijo para los procedimientos almacenados.
+--- sp_xxx
+---------------------------------------------------------------------------
+--- prefijo para los parametros
+--- param_xxx
+-----------------------------------------------------------------------------
+--prefijo para funciones
+---fn_xxx
+-----------------------------------------------------------------------------------
+-- prefijo para paquetes
+--- pck_xxx
+--------------------------------------------------------------------------------
+-- prefijo pra triggers
+-- TGR_xxx
+------------------------------------------------------------------------------------
